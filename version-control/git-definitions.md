@@ -1,5 +1,10 @@
 # Git Definitions
 
+___━*━___━━___━__*___━_*___━╭­­­­­━━━━━━━━╮ 
+__*_━━___━━___━━*____━━___┗┓|:­­­­­:::::^-----^ 
+___━━___━*━___━━____━━*___━┗|:­­­­­:::::|｡◕‿‿­­­­◕｡| 
+___*━__━━_*___━━___*━━___*━━╰O­­­­­--O---O--O ╯
+
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
