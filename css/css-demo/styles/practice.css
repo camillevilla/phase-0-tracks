@@ -12,3 +12,7 @@
 .accomplishments {
   font-size: .8em;
 }
+
+li::first-letter {
+  font-size: 1.4em;
+}
