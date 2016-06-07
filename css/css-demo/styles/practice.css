@@ -20,3 +20,7 @@ li::first-letter {
 h1:hover{
   background-color: yellow;
 }
+
+ol li {
+  background-color: DodgerBlue;
+}
