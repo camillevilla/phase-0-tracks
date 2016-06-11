@@ -18,5 +18,13 @@
   display: block;
   position: relative;
   top: -400px;
-  z-index: 30
+  z-index: 3
+}
+
+#glasses {
+  display: block;
+  position: relative;
+  top: -360px;
+  left: 40px;
+  z-index: 2
 }
