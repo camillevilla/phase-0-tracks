@@ -1,0 +1,13 @@
+- Look for "current floor"
+- Pick elevator:
+  - If "destination" is higher than "current floor":
+    - Press up arrow
+  - Else:
+    - Press down arrow
+- Enter elevator when it arrives
+- Push button matching "destination"
+- When door opens:
+  - if "current floor" matches "destination":
+    - exit elevator
+  - else:
+    - remain on elevator
