@@ -1,0 +1,27 @@
+Release 0: elevator
+- Look for "current floor"
+- Pick elevator:
+  - If "destination" is higher than "current floor":
+    - Press up arrow
+  - Else:
+    - Press down arrow
+- Enter elevator when it arrives
+- Push button matching "destination"
+- When door opens:
+  - if "current floor" matches "destination":
+    - exit elevator
+  - else:
+    - remain on elevator
+
+Release 1: Make drip coffee
+- Measure out enough water to match "cups"
+- Place coffee filter in basket
+- Place carafe under dripper
+- Place coffee grinds in grinder
+- Grind beans until finely ground
+- Add [2 * "cups"] tablespoons of grinds to basket
+- Close machine
+- Turn on machine
+- Wait until cups of drip coffee matches "cups"
+- Turn off machine
+- Pour coffee into mugs
