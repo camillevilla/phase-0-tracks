@@ -1,0 +1,21 @@
+.column-1, .column-2 {
+  display:inline-block;
+  width: 40%;
+  margin: 20px auto;
+  vertical-align: top;
+}
+
+.column-1 {
+  border-right: thick solid black;
+  padding-right: 20px;
+}
+
+h2 {
+  font-family: Helvetica;
+  color: DodgerBlue;
+}
+
+header, footer {
+  width: 80%;
+  margin: 0 auto;
+}
