@@ -1,3 +1,5 @@
+#a program for employee intake and detecting vampires!
+
 puts "How many employees will you be processing?"
 employees = gets.chomp.to_i
 counter = 0
@@ -48,5 +50,6 @@ while counter < employees
   else
     puts "Results inconclusive"
   end
-
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
