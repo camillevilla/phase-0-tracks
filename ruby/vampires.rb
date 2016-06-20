@@ -6,6 +6,7 @@ currentYear = 2016
 while counter < employees
   counter += 1
 
+  #Questionnaire
   puts "What is your name?"
   name = gets.chomp
 
@@ -22,7 +23,21 @@ while counter < employees
   puts "Would you like to enroll in the company's health insurance? (y/n)"
   insurance = gets.chomp
 
-  if name == 'Drake Cula' || name == 'Tu Fang'
+  puts "Please list your allergies one at a time. Type 'done' when you are finished."
+  sunshine = false
+  allergy = ''
+  while allergy != 'done'
+    allergy = gets.chomp
+    if allergy == 'sunshine'
+      sunshine = true
+    end
+  end
+
+  #Vampire detection logic
+
+  if sunshine == true
+    puts "Probably a vampire"
+  elsif name == 'Drake Cula' || name == 'Tu Fang'
     puts "Definitely a vampire"
   elsif (!(age == currentYear - birthYear) && garlicBread == 'n') && insurance == 'n'
     puts "Almost certainly a vampire"
