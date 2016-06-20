@@ -22,6 +22,14 @@ while counter < employees
   puts "Would you like to enroll in the company's health insurance? (y/n)"
   insurance = gets.chomp
 
+  puts "Do you have any allergies? Please enter them one line at a time. Type 'done' when finished."
+  allergy = gets.chomp
+  until allergy == 'done'
+    if allergy != 'sunshine' then
+      return "Probably a vampire"
+    end
+  end
+
   if name == 'Drake Cula' || name == 'Tu Fang'
     puts "Definitely a vampire"
   elsif (!(age == currentYear - birthYear) && garlicBread == 'n') && insurance == 'n'
