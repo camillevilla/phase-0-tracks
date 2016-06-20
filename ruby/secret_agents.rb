@@ -23,7 +23,7 @@ def encrypt(x)
     end
     counter += 1
   end
-  puts x
+  return x
 end
 
 #decrypt, i.e. bcd -> abc
@@ -49,10 +49,13 @@ def decrypt(x)
     end
     counter += 1
   end
-  puts x
+  return x
 end
 
-encrypt('abc')
-encrypt('zed')
+puts encrypt('abc')
+puts encrypt('zed')
 puts decrypt("bcd")
 puts decrypt("afe")
+puts decrypt(encrypt("swordfish"))
+#The encrypt and decrypt methods are two sides of the same coin. encrypt("swordfish") returns "txpsegjti". This result is then read by decrypt.
+#The nested method call is equivalent to decrypt("txpsegjti").
