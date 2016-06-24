@@ -1,4 +1,5 @@
-#method that takes a spy's real name and creates a fake name
+#Program that takes a spy's real name and creates a fake name
+$aliases = {}
 
 #method for shifting vowels and consonants
 def letter_swap(phrase)
@@ -39,23 +40,31 @@ end
 def secret_name()
   #Ask for name
   puts "First name: "
-  first_name = gets.chomp.downcase
+  first_name = gets.chomp
   puts "Last name: "
-  last_name = gets.chomp.downcase
+  last_name = gets.chomp
+  original_name = first_name + ' ' + last_name
 
   #run letterswap on both names
-  first_name = letter_swap(first_name)
-  last_name = letter_swap(last_name)
+  first_name = letter_swap(first_name.downcase)
+  last_name = letter_swap(last_name.downcase)
   #Swap first and last name
   new_name = last_name.capitalize + " " + first_name.capitalize
+
+  $aliases[original_name.to_sym] = new_name
   puts "\nYour new name is #{new_name}."
 end
 
-#User prompt
+#User prompt loop
 puts "Welcome to the secret name generator! Press Enter to proceed. Type 'quit' to exit the program."
 input = ''
+
 while input != "quit"
   secret_name
   puts "Press Enter to generate a new name. Type 'quit' to exit."
   input = gets.chomp
 end
+
+#Print out all aliases
+puts "\nFinal report:"
+$aliases.each {|key, value| puts "#{key} is also known as #{value}"}
