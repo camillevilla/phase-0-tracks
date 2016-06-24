@@ -13,8 +13,15 @@ def letter_swap(phrase)
   #Loop through each letter
   while counter < phrase.length
     letter = phrase[counter]
+
+  #Deal with special cases 'z' and 'u'
+    if letter == 'z'
+      phrase[counter] = 'b'
+    elsif letter == 'u'
+      phrase[counter] = 'a'
+
   #Change all vowels to the next vowel in 'aeiou'
-    if vowels.include?(letter)
+    elsif vowels.include?(letter)
       phrase[counter] = vowels[vowels.find_index(letter) + 1]
 
   #Change all consonants to the next consonant
