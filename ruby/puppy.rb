@@ -1,4 +1,6 @@
 #Puppy class
+class Puppy
+end
 
 #characteristics
   #ears: pointy or floppy
