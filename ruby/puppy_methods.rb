@@ -50,3 +50,14 @@ fido.speak(3)
 fido.rollover
 fido.dog_years(3)
 fido.shake_paw
+
+counter = 0
+cat_array = []
+
+until counter == 50
+  cat_array << Cats.new
+  counter += 1
+end
+
+cat_array.each {|x| x.sleep}
+cat_array.each {|x| x.meow(3)}
