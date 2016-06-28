@@ -1,18 +1,21 @@
 class Santa
+    attr_reader :age, :ethnicity
+    attr_accessor :gender
+
+    def initialize(gender, ethnicity)
+      puts "Initializing Santa instance..."
+      @gender = gender
+      @ethnicity = ethnicity
+      @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+      @age = 0
+    end
+
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
   end
 
   def eat_milk_and_cookies(cookie)
     puts "That was a good #{cookie} cookie!"
-  end
-
-  def initialize(gender, ethnicity)
-    puts "Initializing Santa instance..."
-    @gender = gender
-    @ethnicity = ethnicity
-    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0
   end
 
   def state
@@ -28,22 +31,9 @@ class Santa
     @reindeer_ranking.shift
     p @reindeer_ranking
   end
-
-  #setter method
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
-  #getter methods
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
-  end
 end
 
+#Generate some example Santas
 santas = []
 example_genders = ["two-spirit", "female", "trans female", "trans male", "cis male"]
 example_ethnicities = ["Czech", "Chinese", "Japanese", "Mexican", "Pakistani"]
@@ -55,6 +45,7 @@ santas.each do |x|
   x.state
 end
 
+#DRIVER CODE
 poppy = Santa.new("female", "chinese")
 poppy.get_mad_at("Vixen")
 p poppy
