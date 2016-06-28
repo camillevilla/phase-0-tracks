@@ -17,7 +17,31 @@ class Santa
 
   def state
     puts "I am #{@gender} #{@ethnicity}"
+  end
 
+  def celebrate_birthday
+    @age += 1
+  end
+
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.push(@reindeer_ranking.first)
+    @reindeer_ranking.shift
+    p @reindeer_ranking
+  end
+
+  #setter method
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  #getter methods
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
 end
 
 santas = []
@@ -30,4 +54,12 @@ end
 santas.each do |x|
   x.state
 end
-end
+
+poppy = Santa.new("female", "chinese")
+poppy.get_mad_at("Vixen")
+p poppy
+poppy.gender="male"
+poppy.celebrate_birthday
+p poppy
+p poppy.age
+p poppy.ethnicity
