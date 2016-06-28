@@ -1,6 +1,6 @@
 class Santa
-    attr_reader :age, :ethnicity
-    attr_accessor :gender
+    attr_reader :ethnicity
+    attr_accessor :gender, :age
 
     def initialize(gender, ethnicity)
       puts "Initializing Santa instance..."
@@ -54,3 +54,12 @@ poppy.celebrate_birthday
 p poppy
 p poppy.age
 p poppy.ethnicity
+
+#Generate sample santas with random attributes
+random_santas = []
+15.times do |x|
+  random_santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+  random_santas[x].age=(0..140).to_a.sample
+end
+
+random_santas.each {|x| puts  "#{x.gender}, #{x.age}, #{x.ethnicity}" }
