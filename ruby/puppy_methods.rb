@@ -24,9 +24,25 @@ class Puppy
   def initialize
   p "Initializing new puppy instance..."
 end
-
 end
 
+class Cats
+  def initialize
+    p "Initializing new cat instance..."
+  end
+
+  def meow(int)
+    int.times {|x| puts "Meow!"}
+  end
+
+  def sleep
+    p "Zzzzzz."
+  end
+end
+
+marcie = Cats.new
+marcie.meow(3)
+marcie.sleep
 
 fido = Puppy.new
 fido.fetch('stick')
