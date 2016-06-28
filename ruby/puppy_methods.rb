@@ -20,7 +20,13 @@ class Puppy
   def shake_paw
     p "Shakes paw."
   end
+
+  def initialize
+  p "Initializing new puppy instance..."
 end
+
+end
+
 
 fido = Puppy.new
 fido.fetch('stick')
