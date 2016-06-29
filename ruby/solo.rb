@@ -16,14 +16,12 @@ class Dragon
     end
 
     #add gold pieces to horde if argument is supplied; otherwise
-    def horde(x='gold')
-      if x == 'gold'
-        print "There are #{@horde} pieces of gold in the horde."
-      elsif x.is_a? Integer
+    def change_horde(x)
+      if x.is_a? Integer
         @horde += x
         puts "There are now #{@horde} pieces of gold in the horde."
       else
-        print "Please call 'horde()' to print current horde. Otherwise, call horde(integer) to add or subtract pieces to the horde."
+        print "Please enter a positive or negative number to add to or subtract from the horde."
       end
     end
 
@@ -34,9 +32,37 @@ class Dragon
 end
 
 #DRIVER CODE
+=begin
 drogon = Dragon.new(400,300)
 drogon.rawr(3)
 drogon.horde
-drogon.horde(300)
-drogon.horde(-250)
+drogon.change_horde(300)
+drogon.change_horde(-250)
 drogon.burninate("peasants")
+=end
+
+#USER INTERFACE
+puts "Let's make some dragons!"
+
+puts "How many dragons would you like to create?"
+#Loop for creating multiple dragons
+stop = gets.chomp.to_i
+counter = 0
+dragons = []
+while counter < stop
+  puts "How old is the dragon?"
+  age = gets.chomp.to_i
+  puts "How many gold pieces are in the dragon's horde?"
+  horde = gets.chomp.to_i
+  dragons << Dragon.new(age, horde)
+  puts "Dragon created! Next one:"
+  counter += 1
+end
+
+#Print out dragons created
+puts "Dragons created:"
+counter = 0
+while counter < dragons.length
+  puts "Dragon #{counter +1}: #{dragons[counter].element}, #{dragons[counter].age} years old, #{dragons[counter].horde} pieces"
+  counter += 1
+end
