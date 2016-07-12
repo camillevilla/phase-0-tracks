@@ -15,3 +15,12 @@ function reverse(str){
   }
   return new_str;
 }
+
+//DRIVER CODE
+var x = reverse("cabbage");
+if (2 > 1) {
+  console.log(x);
+}
+else {
+  console.log('nope!')
+}
