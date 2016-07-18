@@ -1,0 +1,36 @@
+1. Display the information in one table (either table is fine).
+Input:
+SELECT * FROM students
+Output:
+1|Astrud|4|1
+2|Joao|3|3
+3|Nimrod|2|2
+4|Quito|5|1
+5|Esperanza|2|3
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+Input:
+UPDATE students SET grade=5 WHERE name="Astrud";
+
+3. Display the information in both tables using one query.
+Input:
+SELECT * FROM students, teachers WHERE students.teacher_id = teachers.id;
+Output:
+1|Astrud|5|1|1|Mr. Camargo
+2|Joao|3|3|3|Ms. Gilberto
+3|Nimrod|2|2|2|Ms. Smith
+4|Quito|5|1|1|Mr. Camargo
+5|Esperanza|2|3|3|Ms. Gilberto
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+Input:
+SELECT students.name, teachers.name FROM students JOIN teachers on students.teacher_id = teachers.id;
+Output:
+Astrud|Mr. Camargo
+Joao|Ms. Gilberto
+Nimrod|Ms. Smith
+Quito|Mr. Camargo
+Esperanza|Ms. Gilberto
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM students WHERE name="Esperanza";
