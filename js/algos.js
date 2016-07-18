@@ -35,6 +35,35 @@ function sharedKey(obj1, obj2) {
   return false;
 }
 
+//Release 2: function should
+  // - generate an array of given integer length
+  // - words will be randomly generated strings, 1 to 10 characters long
+function generateWords(int){
+
+  var testData = [];
+  var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  //Loop: add words to array until it is as long as int
+  for (var word_counter = 0; word_counter <= int - 1; word_counter++)
+  {
+    var currentWord = '';
+
+    //randomly select word length from 1 to 10
+    var currentLength = Math.floor(Math.random()*11) + 1;
+
+      //Loop: add random letters to the current string
+      for (var letter_counter = 0; letter_counter < currentLength; letter_counter++){
+
+        // generate random letter and add to word
+        currentWord += characters[Math.floor(Math.random()*52)];
+      }
+    // add generated word to array
+    testData.push(currentWord);
+  }
+  return testData;
+}
+
+
 //DRIVER CODE
 console.log(longestPhrase(["long phrase","longest phrase","longer phrase"]));
 console.log(longestPhrase(["a","bee","catdog"]));
@@ -47,3 +76,18 @@ console.log(sharedKey(book, magazine));
 var apple = {seeds: 5, stem: true};
 var orange = {peel: true, slices: 8};
 console.log(sharedKey(apple,orange));
+
+//test generateWords
+console.log(generateWords(3));
+console.log(generateWords(8));
+
+//Release 2 test
+  console.log("Release 2 test:");
+  //Run test 10 times
+  for (var test_counter = 0; test_counter < 10; test_counter++){
+      //generate array
+      var test = generateWords(5);
+      console.log(test);
+      //search for longest word
+      console.log(longestPhrase(test));
+    }
