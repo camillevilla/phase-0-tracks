@@ -7,13 +7,8 @@
 
 // hide or show sub-ul if the h3 is clicked. does it need a child tag?
 
-var crust = document.getElementById("crust");
-console.log(crust.innerHTML);
-
 // hide lists by default
 $("ul").addClass("hidden");
-
-$("#receipt").append(crust.innerText);
 
 $("h3").on('click',function(){
   //remove state un-selected elements
@@ -28,3 +23,9 @@ $("h3").on('click',function(){
 
 // click event handler for list items
   //something to take text selected and add it to table  //$(this).innerText)
+var x ='';
+$("li").on('click',function(){
+  $(this).toggleClass("selected");
+  x = $("li.selected").text();
+  $("table").append("<tr><td>"+ x + "</td></tr>");
+});
