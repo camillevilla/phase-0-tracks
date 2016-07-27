@@ -1,3 +1,15 @@
+body {
+  font-family: Helvetica;
+}
+
+h3 {
+  background-color: DodgerBlue;
+  padding: 50px;
+  text-transform: uppercase;
+  width: 200px;
+  text-align: center;
+}
+
 .hidden {
   display:none;
 }
