@@ -8,12 +8,11 @@ I already know a little bit of jQuery from Codecademy and a Railsbridge workshop
     - non-selected options should gray out; sub options should appear underneath
   - options added should be listed in an order receipt (table) at the bottom of the page
 
-I'll use Javascript for Kids for a quick intro.
+I'll start out with the Udacity jQuery course.
 
-The Odin Project recommended jQuery fundamentals for a short introduction:
-http://jqfundamentals.com/
+When I'm learning something, it usually helps for me to have a project that I can test things out with.
 
-When I'm learning something, it usually helps for me to have a project that I can test things out with. I'll block out some simple HTML and CSS to get me started.
+I'll block out some simple HTML and CSS to get me started.
 
 Steps for the project:
 - block out basic HTML structure of the menu and receipt
@@ -21,7 +20,3 @@ Steps for the project:
 - hide elements responding to click events
 - figure out how to bundle two actions into one click event (e.g. clicking "pepperoni" affects the button AND adds pepperoni to the receipt table)
 - learn how to make things return to their previous state after being clicked
-- bonus: hide z-indexed pizza elements
-
-Notes:
-- var.innerText should come in handy for creating the receipt

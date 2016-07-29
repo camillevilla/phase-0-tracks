@@ -1,5 +1,5 @@
 //Notes
-//
+// - show already selected toppings when reopening category
 // - fix Toppings toggle problems
 
 // hide lists by default
@@ -17,6 +17,9 @@ $("h3").on('click',function(){
   //add state to selected elements
   $(this).toggleClass("selected");
 
+  //highlight toppings that are already on pizza
+
+
 });
 
 // click event handler for list items
@@ -27,9 +30,12 @@ $("li").on('click',function(){
   x = $(this).text();
     //need to use a .each to check if ANY tr matches the de-selected text
     if (check_receipt(x) == true)
-     remove_receipt_row(receipt_row(x));
+     remove_receipt_row(receipt_row(x)) $("ul");
+
+     //$(this).removeClass("on-receipt")
   else
    $("table").append("<tr><td>"+ x + "</td></tr>");
+   //$(this).addClass("on-receipt");
 });
 
 
@@ -64,8 +70,3 @@ function check_receipt(x){
 function remove_receipt_row(int){
 $("#receipt tr:nth-child("+ (int + 1) + ")").remove();
 };
-
-console.log(check_receipt("wee"));
-console.log(receipt_row("wee"));
-console.log(receipt_row("ya"));
-console.log(check_receipt("wah"));
