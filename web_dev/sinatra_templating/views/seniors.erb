@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Senior Citizens Roster</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Senior Citizens Roster</h1>
+    <p>
+      All students 65+:
+    </p>
+    <ul>
+      <% @seniors.each do |student| %>
+        <li><%= student['name'] %>, <%= student['age'] %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
