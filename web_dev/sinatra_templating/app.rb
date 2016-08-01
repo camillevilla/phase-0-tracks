@@ -25,3 +25,9 @@ post '/students' do
 end
 
 # add static resources
+
+#show senior citizen students
+get '/seniors' do
+  @seniors = db.execute("SELECT * FROM students WHERE age>62")
+  erb :seniors
+end
